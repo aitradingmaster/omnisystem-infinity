@@ -1,0 +1,1 @@
+# Trade logger file placeholder
