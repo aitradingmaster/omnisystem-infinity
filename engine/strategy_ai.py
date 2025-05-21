@@ -11,7 +11,6 @@ def make_decisions(data):
         rsi = get_rsi(ticker)
         sma = get_sma(ticker)
 
-        # Confidence score based on combined signals
         confidence = 0.4 * pred + 0.2 * sentiment + 0.2 * (1 - abs(rsi - 50) / 50) + 0.2 * (1 if price > sma else 0)
 
         if confidence > 0.75:
